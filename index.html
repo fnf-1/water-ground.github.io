@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Water Ground | Information</title>
+
     <link href="dist/output.css" rel="stylesheet" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <script>
@@ -114,8 +115,8 @@
             <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">Merupakan sebuah website yang dikembangkan oleh tim Karya Ilmiah Remaja (KIR) SMA Negeri 1 Brebes, yang bertujuan untuk memanfaatkan adanya teknologi sebagai sarana edukasi dan informasi.</p>
           </div>
           <div class="w-full px-4 lg:w-1/2">
-            <h3 class="font-semibold text-dark text-2xl mb-4 dark:text-white lg:pt-12 lg:text-3xl">Lorem ipsum dolor sit amet consectetur.</h3>
-            <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur soluta rerum, placeat officia velit voluptate possimus.</p>
+            <h3 class="font-semibold text-dark text-2xl mb-4 dark:text-white lg:pt-12 lg:text-3xl">Anda akan diajak untuk</h3>
+            <p class="font-medium text-base text-secondary mb-6 lg:text-lg"> Memahami apa itu air tanah?, jenis-jenis air tanah, pemanfaatan oleh manusia hingga lingkungan dan juga terdapat teknologi yang digunakan dalam satu dekade ini 😊  </p>
           </div>
         </div>
       </div>
@@ -345,22 +346,23 @@
             <p class="font-medium text-md text-secondary md:text-lg">Jika anda memiliki beberapa masalah atau saran, silahkan hubung kami melalui form dibawah ini.</p>
           </div>
         </div>
-        <form action="">
+        <form action="" name="water-ground-forms">
           <div class="w-full lg:w-2/3 lg:mx-auto">
             <div class="w-full px-4 mb-8">
               <label for="name" class="text-base text-sky font-bold">Nama</label>
-              <input type="text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-sky focus:ring-1 focus-border-sky"/>
+              <input type="text" id="name" name="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-sky focus:ring-1 focus-border-sky"/>
             </div>
             <div class="w-full px-4 mb-8">
               <label for="email" class="text-base text-sky font-bold">Email</label>
-              <input type="email" id="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-sky focus:ring-1 focus-border-sky"/>
+              <input type="email" id="email" name="email" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-sky focus:ring-1 focus-border-sky"/>
             </div>
             <div class="w-full px-4 mb-8">
               <label for="message" class="text-base text-sky font-bold">Pesan</label>
-              <textarea type="text" id="name" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-sky focus:ring-1 focus-border-sky h-32"> </textarea>
+              <textarea type="text" id="message" name="message" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-sky focus:ring-1 focus-border-sky h-32"> </textarea>
             </div>
             <div class="w-full">
-              <button class="text-base font-semibold text-white bg-sky py-3 px-8 rounded-full hover:opacity-80 hover-shadow-lg transition duration-500">Kirim</button>
+              <button type="submit" id="tekan" class="text-base font-semibold text-white bg-sky py-3 px-8 rounded-full hover:opacity-80 hover-shadow-lg transition duration-500">Kirim</button>
+              <button type="submit" id="proses" class="bg-sky py-3 px-3 rounded-full animate-ping hidden"></button>
             </div>
           </div>
       </form>
@@ -385,7 +387,7 @@
 
     <!-- Back to top start -->
 
-    <a href="#home" class="justify-center items-center h-12 w-12 p-4 bg-sky rounded-full  fixed z-[9999] bottom-4 right-4 hover:animate-pulse hidden" id="top">
+    <a href="#home" class="animate-bounce justify-center items-center h-12 w-12 p-4 bg-sky rounded-full  fixed z-[9999] bottom-4 right-4 hover:animate-pulse hidden" id="top">
       <span>
         <i class="icon-chevron-up text-white"></i>
       </span>
@@ -394,5 +396,32 @@
     <!-- Back to top end -->
 
     <script src="dist/js/script.js"></script>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxXzP3Xb-7yU9gyrikw_CGRgpOmED8Q_ygwZQkJ5gBuvi68iEyCn0vP79fm5gwNPUkX/exec'
+      const form = document.forms['water-ground-forms']
+      const btnTekan = document.querySelector('#tekan');
+      const btnProses = document.querySelector('#proses');
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        // ketika tombol submit diklik
+        // tampilkan tombol proses hilangkan tombol tekan
+        btnProses.classList.toggle('hidden');
+        btnTekan.classList.toggle('hidden');
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+
+
+            btnProses.classList.toggle('hidden');
+            btnTekan.classList.toggle('hidden');
+            alert("Terima kasih, pesan anda sudah kami terima!");
+
+            // reset form
+            form.reset();
+            console.log('Success!', response)
+        })
+          .catch(error => console.error('Error!', error.message))
+      });
+    </script>
   </body>
 </html>
