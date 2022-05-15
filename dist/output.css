@@ -810,6 +810,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   fill: #fff;
 }
 
+.fill-stone-50 {
+  fill: #fafaf9;
+}
+
+.fill-stone-100 {
+  fill: #f5f5f4;
+}
+
+.fill-stone-200 {
+  fill: #e7e5e4;
+}
+
+.fill-stone-300 {
+  fill: #d6d3d1;
+}
+
+.fill-stone-400 {
+  fill: #a8a29e;
+}
+
 .p-1 {
   padding: 0.25rem;
 }
@@ -1130,6 +1150,26 @@ body {
 
 .dark .dark\:fill-dark {
   fill: #0f172a;
+}
+
+.dark .dark\:fill-stone-500 {
+  fill: #78716c;
+}
+
+.dark .dark\:fill-stone-600 {
+  fill: #57534e;
+}
+
+.dark .dark\:fill-stone-700 {
+  fill: #44403c;
+}
+
+.dark .dark\:fill-stone-800 {
+  fill: #292524;
+}
+
+.dark .dark\:fill-stone-900 {
+  fill: #1c1917;
 }
 
 .dark .dark\:text-white {
