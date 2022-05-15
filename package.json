@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/fnf-1/water-ground.github.io#readme",
   "devDependencies": {
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.10",
     "tailwindcss": "^3.0.24"
   }
 }

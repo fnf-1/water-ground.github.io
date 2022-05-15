@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Water Ground | Information</title>
     <link href="dist/output.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark')
+} else {
+  document.documentElement.classList.remove('dark')
+}
+    </script>
   </head>
   <body>
     <!-- Header Start -->
@@ -23,25 +31,37 @@
               <span class="tombol-line transition duration-300 ease-in-out origin-bottom-left"></span>
             </button>
 
-            <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+            <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-gray-800 lg:dark:bg-transparent">
               <ul class="block lg:flex">
                 <li class="group">
-                  <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-sky">Home</a>
+                  <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-sky dark:text-white">Home</a>
                 </li>
                 <li class="group">
-                  <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-sky">About Us</a>
+                  <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-sky dark:text-white">About Us</a>
                 </li>
                 <li class="group">
-                  <a href="#utilization" class="text-base text-dark py-2 mx-8 flex group-hover:text-sky">Utilization</a>
+                  <a href="#utilization" class="text-base text-dark py-2 mx-8 flex group-hover:text-sky dark:text-white">Utilization</a>
                 </li>
                 <li class="group">
-                  <a href="#type" class="text-base text-dark py-2 mx-8 flex group-hover:text-sky">Type</a>
+                  <a href="#type" class="text-base text-dark py-2 mx-8 flex group-hover:text-sky dark:text-white">Type</a>
                 </li>
                 <li class="group">
-                  <a href="#content" class="text-base text-dark py-2 mx-8 flex group-hover:text-sky">Content</a>
+                  <a href="#technology" class="text-base text-dark py-2 mx-8 flex group-hover:text-sky dark:text-white">Technology</a>
                 </li>
                 <li class="group">
-                  <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-sky">Contact Us</a>
+                  <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-sky dark:text-white">Contact Us</a>
+                </li>
+                <li class="flex item-center pl-8 pt-2">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500">Light</span>
+                    <input type="checkbox" class="hidden" name="" id="dark-toggle">
+                    <label for="dark-toggle">
+                      <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                        <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500">Dark</span>
+                  </div>
                 </li>
               </ul>
             </nav>
@@ -51,20 +71,22 @@
     </header>
 
     <!-- Header End-->
-    <!-- Hero section start -->
+    <!-- Hero section star t -->
 
-    <section id="home" class="pt-36">
+    <section id="home" class="pt-36 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
-            <h1 class="text-base font-semibold text-sky md:text-xl lg:text-3xl">Welcome 👋 to <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl">Water Ground Information</span></h1>
-            <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">SMA NEGERI 1 BREBES</h2>
-            <p class="font-medium text-slate-400 mb-10 leading-relaxed">Website yang berisikan informasi tentang air tanah</p>
+            <h1 class="text-base font-semibold text-sky md:text-xl lg:text-3xl">Welcome 👋 to <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl dark:text-white">Water Ground Information</span></h1>
+            <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl dark:text-white">SMA NEGERI 1 BREBES</h2>
+            <div class="w-full pt-10 border-t border-slate-800">
+              <p class="font-medium text-slate-400 mb-10 leading-relaxed">Website yang berisikan informasi tentang air tanah</p>
+            </div>
           </div>
           <div class="w-full self-end px-4 lg:w-1/2">
             <div class="relative mt-10 lg:mt-9 lg:right-0">
-              <img src="dist/img/logo_smansa1.png" alt="smansabes" class="max-w-full mx-auto" />
-              <span class="absolute bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-125">
+              <img src="dist/img/logo_smansa1.png" alt="smansabes" class="relative z-10 max-w-full mx-auto" />
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
                 <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                   <path
                     fill="#06B6D4"
@@ -83,16 +105,16 @@
 
     <!-- About section start -->
 
-    <section id="about" class="pt-36 pb-32">
+    <section id="about" class="pt-36 pb-32 dark:bg-dark">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full px-4 mb-10 lg:w-1/2">
             <h4 class="font-bold uppercase text-sky text-lg mb-3">About Us</h4>
-            <h2 class="font-bold text-dark text-3xl mb-5 max-w-md">Lorem ipsum dolor</h2>
+            <h2 class="font-bold text-dark text-3xl mb-5 max-w-md dark:text-white">Lorem ipsum dolor</h2>
             <p class="font-medium text-base text-secondary max-w-xl">Lorem ipsum dolor sit amet consectetur.</p>
           </div>
           <div class="w-full px-4 lg:w-1/2">
-            <h3 class="font-semibold text-dark text-2xl mb-4">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h3 class="font-semibold text-dark text-2xl mb-4 dark:text-white">Lorem ipsum dolor sit amet consectetur.</h3>
             <p class="font-medium text-base text-secondary mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur soluta rerum, placeat officia velit voluptate possimus.</p>
           </div>
         </div>
@@ -103,13 +125,13 @@
 
     <!-- Utilization start -->
 
-    <section id="utilization" class="pt-36 pb-18 bg-slate-100">
+    <section id="utilization" class="pt-36 pb-18 bg-slate-100 dark:bg-slate-800">
       <div class="container">
         <div class="w-full px-4">
           <div class="max-w-xl mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg text-sky mb-2 md:text-2xl">Utilization</h4>
-            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Pemanfaatan air tanah</h2>
-            <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit velit minus nihil, voluptates fuga veritatis assumenda.</p>
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Pemanfaatan air tanah</h2>
+            <p class="font-medium text-md text-secondary md:text-lg">Terdapat pemanfaatan air tanah secara umum baik bagi manusia atau bahkan lingkungan</p>
           </div>
         </div>
         <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
@@ -117,43 +139,43 @@
             <div class="rounded shadow-md overflow-hidden">
               <img src="dist/img/utilization/4.jpg" alt="photos from : https://unsplash.com/photos/_EMkxLdko9k " width="w-full" />
             </div>
-            <h3 class="font-semibold text-center text-dark mt-5 mb-3 md:text-lg">Bagian penting dalam siklus hidrologi</h3>
+            <h3 class="font-semibold text-center text-dark mt-5 mb-3 md:text-lg dark:text-white">Bagian penting dalam siklus hidrologi</h3>
           </div>
           <div class="mb-12 p-4 md:w-1/2">
             <div class="rounded shadow-md overflow-hidden">
               <img src="dist/img/utilization/2.jpg" alt="photos from : https://unsplash.com/photos/ETCu7JobC8g" width="w-full" />
             </div>
-            <h3 class="font-semibold text-center text-dark mt-5 mb-3 md:text-lg">Irigasi (Sumber air bagi pertanian)</h3>
+            <h3 class="font-semibold text-center text-dark mt-5 mb-3 md:text-lg dark:text-white">Irigasi (Sumber air bagi pertanian)</h3>
           </div>
           <div class="mb-12 p-4 md:w-1/2">
             <div class="rounded shadow-md overflow-hidden">
               <img src="dist/img/utilization/3.jpg" alt="photos from : https://unsplash.com/photos/kgC99X3WH1w" width="w-full" />
             </div>
-            <h3 class="font-semibold text-center text-dark mt-5 mb-3 md:text-lg">Perindustrian, seperti pada industri tekstil</h3>
+            <h3 class="font-semibold text-center text-dark mt-5 mb-3 md:text-lg dark:text-white">Perindustrian, seperti pada industri tekstil</h3>
           </div>
           <div class="mb-12 p-4 md:w-1/2 img-center">
             <div class="rounded shadow-md overflow-hidden">
               <img src="dist/img/utilization/1.jpg" alt="photos from : https://unsplash.com/photos/kDxqbAvEBwI " width="w-full" />
             </div>
-            <h3 class="font-semibold text-center text-dark mt-5 mb-3 md:text-lg">Kebutuhan rumah tangga</h3>
+            <h3 class="font-semibold text-center text-dark mt-5 mb-3 md:text-lg dark:text-white">Kebutuhan rumah tangga</h3>
           </div>
           <div class="mb-12 p-4 md:w-1/2 justify-center">
             <div class="rounded shadow-md overflow-hidden">
               <img src="dist/img/utilization/5.jpg" alt="photos from : https://unsplash.com/photos/o8iXJVAahUc" width="w-full" />
             </div>
-            <h3 class="font-semibold text-center text-dark mt-5 mb-3 md:text-lg">Pembangkit listrik</h3>
+            <h3 class="font-semibold text-center text-dark mt-5 mb-3 md:text-lg dark:text-white">Pembangkit listrik</h3>
           </div>
           <div class="mb-12 p-4 md:w-1/2">
             <div class="rounded shadow-md overflow-hidden">
               <img src="dist/img/utilization/6.jpg" alt="photos from : https://unsplash.com/photos/1Z2niiBPg5A" width="w-full" />
             </div>
-            <h3 class="font-semibold text-center text-dark mt-5 mb-3 md:text-lg">Labolatorium alam</h3>
+            <h3 class="font-semibold text-center text-dark mt-5 mb-3 md:text-lg dark:text-white">Labolatorium alam</h3>
           </div>
           <div class="mb-12 p-4 md:w-1/2 justify-center">
             <div class="rounded shadow-md overflow-hidden">
               <img src="dist/img/utilization/7.jpg" alt="photos from : https://unsplash.com/photos/c17nUw6HIFc" width="w-full" />
             </div>
-            <h3 class="font-semibold text-center text-dark mt-5 mb-3 md:text-lg">Wisata dan olahraga</h3>
+            <h3 class="font-semibold text-center text-dark mt-5 mb-3 md:text-lg dark:text-white">Wisata dan olahraga</h3>
           </div>
         </div>
       </div>
@@ -163,64 +185,64 @@
 
     <!-- Type Start -->
 
-    <section id="type" class="pt-36 pb-18 bg-gray-700">
+    <section id="type" class="pt-36 pb-18 bg-gray-700 dark:bg-gray-300">
       <div class="container">
         <div class="w-full px-4">
           <div class="mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg text-sky mb-2 md:text-2xl">Type</h4>
-            <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl">Jenis - jenis air tanah</h2>
+            <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-dark">Jenis - jenis air tanah</h2>
             <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit velit minus nihil, voluptates fuga veritatis assumenda.</p>
           </div>
           <div class="w-full px-4 flex flex-wrap justify-center">
             <div class="mb-12 p-4 md:w-1/5">
               <div class="rounded overflow-hidden">
-                <svg role="img" width="w-full" class="item-center fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg role="img" width="w-full" class="item-center fill-white dark:fill-dark" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M12.7 1.088L12 0l-.7 1.088c-.751 1.168-7.342 11.525-7.342 15.366C3.958 20.615 7.565 24 12 24s8.042-3.385 8.042-7.546c0-3.84-6.591-14.197-7.342-15.366zM12 22.335c-3.516 0-6.377-2.638-6.377-5.881C5.623 13.908 9.732 6.756 12 3.1c2.268 3.656 6.377 10.809 6.377 13.355 0 3.242-2.861 5.88-6.377 5.88zm4.957-6.017c0 2.548-2.22 4.615-4.957 4.615-2.737 0-4.957-2.067-4.957-4.615 0-.163.021-.347.058-.549 0 0 1.306-2.616 4.847 0 2.999 2.215 4.95 0 4.95 0 .038.202.059.386.059.549z"
                   />
                 </svg>
               </div>
-              <h3 class="font-semibold text-center text-white mt-5 mb-3 md:text-lg">Air Tanah Freatik</h3>
+              <h3 class="font-semibold text-center text-white mt-5 mb-3 md:text-lg dark:text-dark">Air Tanah Freatik</h3>
             </div>
             <div class="mb-12 p-4 md:w-1/5">
               <div class="rounded overflow-hidden">
-                <svg role="img" width="w-full" class="item-center fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg role="img" width="w-full" class="item-center fill-white dark:fill-dark" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M12.7 1.088L12 0l-.7 1.088c-.751 1.168-7.342 11.525-7.342 15.366C3.958 20.615 7.565 24 12 24s8.042-3.385 8.042-7.546c0-3.84-6.591-14.197-7.342-15.366zM12 22.335c-3.516 0-6.377-2.638-6.377-5.881C5.623 13.908 9.732 6.756 12 3.1c2.268 3.656 6.377 10.809 6.377 13.355 0 3.242-2.861 5.88-6.377 5.88zm4.957-6.017c0 2.548-2.22 4.615-4.957 4.615-2.737 0-4.957-2.067-4.957-4.615 0-.163.021-.347.058-.549 0 0 1.306-2.616 4.847 0 2.999 2.215 4.95 0 4.95 0 .038.202.059.386.059.549z"
                   />
                 </svg>
               </div>
-              <h3 class="font-semibold text-center text-white mt-5 mb-3 md:text-lg">Air Tanah Dalam (Astesis)</h3>
+              <h3 class="font-semibold text-center text-white mt-5 mb-3 md:text-lg dark:text-dark">Air Tanah Dalam (Astesis)</h3>
             </div>
             <div class="mb-12 p-4 md:w-1/5">
               <div class="rounded overflow-hidden">
-                <svg role="img" width="w-full" class="item-center fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg role="img" width="w-full" class="item-center fill-white dark:fill-dark" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M12.7 1.088L12 0l-.7 1.088c-.751 1.168-7.342 11.525-7.342 15.366C3.958 20.615 7.565 24 12 24s8.042-3.385 8.042-7.546c0-3.84-6.591-14.197-7.342-15.366zM12 22.335c-3.516 0-6.377-2.638-6.377-5.881C5.623 13.908 9.732 6.756 12 3.1c2.268 3.656 6.377 10.809 6.377 13.355 0 3.242-2.861 5.88-6.377 5.88zm4.957-6.017c0 2.548-2.22 4.615-4.957 4.615-2.737 0-4.957-2.067-4.957-4.615 0-.163.021-.347.058-.549 0 0 1.306-2.616 4.847 0 2.999 2.215 4.95 0 4.95 0 .038.202.059.386.059.549z"
                   />
                 </svg>
               </div>
-              <h3 class="font-semibold text-center text-white mt-5 mb-3 md:text-lg">Air Tanah Meteorit (Vados)</h3>
+              <h3 class="font-semibold text-center text-white mt-5 mb-3 md:text-lg dark:text-dark">Air Tanah Meteorit (Vados)</h3>
             </div>
             <div class="mb-12 p-4 md:w-1/5">
               <div class="rounded overflow-hidden">
-                <svg role="img" width="w-full" class="item-center fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg role="img" width="w-full" class="item-center fill-white dark:fill-dark" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M12.7 1.088L12 0l-.7 1.088c-.751 1.168-7.342 11.525-7.342 15.366C3.958 20.615 7.565 24 12 24s8.042-3.385 8.042-7.546c0-3.84-6.591-14.197-7.342-15.366zM12 22.335c-3.516 0-6.377-2.638-6.377-5.881C5.623 13.908 9.732 6.756 12 3.1c2.268 3.656 6.377 10.809 6.377 13.355 0 3.242-2.861 5.88-6.377 5.88zm4.957-6.017c0 2.548-2.22 4.615-4.957 4.615-2.737 0-4.957-2.067-4.957-4.615 0-.163.021-.347.058-.549 0 0 1.306-2.616 4.847 0 2.999 2.215 4.95 0 4.95 0 .038.202.059.386.059.549z"
                   />
                 </svg>
               </div>
-              <h3 class="font-semibold text-center text-white mt-5 mb-3 md:text-lg">Air Tanah Baru (Juvenil)</h3>
+              <h3 class="font-semibold text-center text-white mt-5 mb-3 md:text-lg dark:text-dark">Air Tanah Baru (Juvenil)</h3>
             </div>
             <div class="mb-12 p-4 md:w-1/5">
               <div class="rounded overflow-hidden">
-                <svg role="img" width="w-full" class="item-center fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg role="img" width="w-full" class="item-center fill-white dark:fill-dark" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M12.7 1.088L12 0l-.7 1.088c-.751 1.168-7.342 11.525-7.342 15.366C3.958 20.615 7.565 24 12 24s8.042-3.385 8.042-7.546c0-3.84-6.591-14.197-7.342-15.366zM12 22.335c-3.516 0-6.377-2.638-6.377-5.881C5.623 13.908 9.732 6.756 12 3.1c2.268 3.656 6.377 10.809 6.377 13.355 0 3.242-2.861 5.88-6.377 5.88zm4.957-6.017c0 2.548-2.22 4.615-4.957 4.615-2.737 0-4.957-2.067-4.957-4.615 0-.163.021-.347.058-.549 0 0 1.306-2.616 4.847 0 2.999 2.215 4.95 0 4.95 0 .038.202.059.386.059.549z"
                   />
                 </svg>
               </div>
-              <h3 class="font-semibold text-center text-white mt-5 mb-3 md:text-lg">Air Fosil (Konat)</h3>
+              <h3 class="font-semibold text-center text-white mt-5 mb-3 md:text-lg dark:text-dark">Air Fosil (Konat)</h3>
             </div>
           </div>
         </div>
@@ -228,6 +250,60 @@
     </section>
 
     <!-- Type End -->
+
+    <!-- Technology Start -->
+
+    <section id="technology" class="pt-36 pb-18 bg-slate-100 dark:bg-slate-800">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-sky mb-2 md:text-2xl">Technology</h4>
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Teknologi Air Tanah</h2>
+            <p class="font-medium text-md text-secondary md:text-lg">Di bagian ini terdapat teknologi yang digunakan untuk memanfaatkan air tanah</p>
+          </div>
+        </div>
+        <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
+          <div class="mb-12 p-4 md:w-1/2 xl:-1/3">
+            <div class="rounded-md overflow-hidden md:content-center">
+              <img src="dist/img/technology/1.png" alt="photos from : https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.kelair.bppt.go.id%2Fsitpapdg%2FPatek%2FAkua%2Fakua.html&psig=AOvVaw0aA0fAaRfV7IDX012v4O89&ust=1652671875771000&source=images&cd=vfe&ved=0CA4Q3YkBahcKEwjgr6_ayOD3AhUAAAAAHQAAAAAQAw " width="w-full" />
+            </div>
+            <h3 class="font-semibold text-dark mt-5 mb-3 md:text-2xl dark:text-white">Pengolahan Air Siap Minum</h3>
+            <p class=" text-secondary mt-5 mb-3 md:text-md"> Pengolahan air sumur yang dapat diminum secara langsung tanpa perlu dimasak terlebih dahulu</p>
+            <div class="w-full">
+              <a href="http://www.kelair.bppt.go.id/sitpapdg/Patek/Akua/akua.html" target="_blank">
+                <button class="text-base font-semibold text-white bg-sky py-3 px-8 rounded-full hover:opacity-80 hover-shadow-lg transition duration-500">Visit</button>
+              </a>
+            </div>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2 xl:-1/3">
+            <div class="rounded-md overflow-hidden md:content-center">
+              <img src="dist/img/technology/2.jpg" alt="photos from : https://www.google.com/url?sa=i&url=http%3A%2F%2Felearning.litbang.pu.go.id%2Fteknologi%2Firigasi-modular&psig=AOvVaw3bV04gscI47mEzCqkY3Mn0&ust=1652673064241000&source=images&cd=vfe&ved=2ahUKEwjSz9SIzeD3AhUmi9gFHdt1Cz0Qr4kDegUIARC4AQ" width="w-full" />
+            </div>
+            <h3 class="font-semibold text-dark mt-5 mb-3 md:text-2xl dark:text-white">Teknologi Saluran Irigasi Modular</h3>
+            <p class=" text-secondary mt-5 mb-3 md:text-md"> Teknologi saluran irigasi menggunakan beton precast dengan bentuk desan dan komponen penyusun yang standar, sehingga dapat diterapkan pada berbagai dimensi desain saluran dan mudah difabrikasi</p>
+            <div class="w-full">
+              <a href="http://elearning.litbang.pu.go.id/teknologi/irigasi-modular#:~:text=Teknolgi%20Saluran%20Irigasi%20Modular%20adalah,desain%20saluran%20dan%20mudah%20difabrikasi." target="_blank">
+                <button class="text-base font-semibold text-white bg-sky py-3 px-8 rounded-full hover:opacity-80 hover-shadow-lg transition duration-500">Visit</button>
+              </a>
+            </div>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2 xl:-1/3">
+            <div class="rounded-md overflow-hidden md:content-center">
+              <img src="dist/img/technology/3.jpg" alt="photos from : https://www.google.com/url?sa=i&url=http%3A%2F%2Ftraining-jogja.com%2Fmanajemen-konservasi-air-tanah%2F&psig=AOvVaw09hfbTnsoOruvws2lmt6_7&ust=1652673553290000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCIiBvfrO4PcCFQAAAAAdAAAAABAD" width="w-full" />
+            </div>
+            <h3 class="font-semibold text-dark mt-5 mb-3 md:text-2xl dark:text-white">Teknologi Konservasi Air Tanah atau Panen Air</h3>
+            <p class=" text-secondary mt-5 mb-3 md:text-md"> Konservasi air pada prinsipnya adalah penggunaan air yangjatuh ke tanah seefisien mungkin dan pengaturan waktu aliran yang tepat, sehingga tidak terjadi banjir</p>
+            <div class="w-full">
+              <a href="https://balittanah.litbang.pertanian.go.id/ind/dokumentasi/buku/lahankering/berlereng7.pdf" target="_blank">
+                <button class="text-base font-semibold text-white bg-sky py-3 px-8 rounded-full hover:opacity-80 hover-shadow-lg transition duration-500">Visit</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology End -->
 
     <!-- <section id="maps" class="pt-36 pb18 bg-slate-100">
       <div class="container">
@@ -247,12 +323,12 @@
 
     <!-- Contact Section Start -->
 
-    <section id="contact" class="pt-36 pb-32">
+    <section id="contact" class="pt-36 pb-32 dark:bg-dark">
       <div class="container">
         <div class="w-full px-4">
           <div class="mx-auto text-center mb-16">
             <h4 class="font-semibold text-lg text-sky mb-2 md:text-2xl">Contact</h4>
-            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Hubungi Kami</h2>
+            <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white">Hubungi Kami</h2>
             <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit velit minus nihil, voluptates fuga veritatis assumenda.</p>
           </div>
         </div>
@@ -279,20 +355,30 @@
 
     <!-- Contact Section End -->
 
+    
+    <!-- Footer Section Start -->
+    
     <footer id="" class="pt-10 pb-10 bg-dark">
       <div class="container">
         <div class="w-full pt-10 border-t border-slate-700 bg-dark">
           <div class="items-center justify-center">
-            <p class="font-bold text-sm text-slate-400 text-center mb-5 bg-dark">Dibuat dengan ❤️ oleh tim KTI, <a href="https://instagram.com/sman1brebes?igshid=YmMyMTA2M2Y=">@SMANEGERI1BREBES</a> </p>
+            <p class="font-bold text-sm text-slate-400 text-center mb-5 bg-dark">Dibuat dengan ❤️ oleh tim KTI, <a href="https://instagram.com/sman1brebes?igshid=YmMyMTA2M2Y=" target="_blank">@SMANEGERI1BREBES</a> </p>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- Footer Section Start -->
-
-
     <!-- Footer section end -->
+
+    <!-- Back to top start -->
+
+    <a href="#home" class="justify-center items-center h-12 w-12 p-4 bg-sky rounded-full  fixed z-[9999] bottom-4 right-4 hover:animate-pulse hidden" id="top">
+      <span>
+        <i class="icon-chevron-up text-white"></i>
+      </span>
+    </a>
+
+    <!-- Back to top end -->
 
     <script src="dist/js/script.js"></script>
   </body>
